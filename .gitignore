@@ -27,6 +27,7 @@ yarn-error.log*
 
 # local env files
 .env*.local
+.env
 
 # vercel
 .vercel
@@ -34,3 +35,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Archivos de entorno
+.env
+.env.local
+.env.*.local
+
+# Otros archivos comunes para ignorar
+node_modules/
+.DS_Store
+*.log
