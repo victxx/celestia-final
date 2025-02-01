@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^1.1.9",
+    "@vercel/edge": "^1.2.1",
     "ai": "^4.1.16",
     "axios": "^1.7.9",
     "clsx": "^2.1.1",
