@@ -27,18 +27,22 @@ const StarryBackground = () => {
     }
 
     function drawStars() {
+      if (!ctx || !canvas) return;
+      
       ctx.clearRect(0, 0, canvas.width, canvas.height)
       ctx.fillStyle = "white"
 
       stars.forEach((star) => {
-        ctx.globalAlpha = star.alpha
+        if (!ctx) return;
+        
         ctx.beginPath()
         ctx.arc(star.x, star.y, star.radius, 0, Math.PI * 2)
         ctx.fill()
 
-        star.alpha += star.velocity
-        if (star.alpha > 1) {
-          star.alpha = 0
+        star.y += star.velocity
+        if (star.y > canvas.height) {
+          star.y = 0
+          star.x = Math.random() * canvas.width
         }
       })
 
